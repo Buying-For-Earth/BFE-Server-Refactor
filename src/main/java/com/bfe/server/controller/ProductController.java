@@ -29,7 +29,10 @@ public class ProductController {
     }
 
     @PostMapping("/product/{id}")
-    public Product update(@PathVariable Long id, @RequestBody ProductDto productDto) {
-        return null;
+    public ResponseEntity<Product> update(@PathVariable Long id, @RequestBody ProductDto productDto) {
+        Product updated = productService.update(id, productDto);
+        return (updated != null) ?
+                ResponseEntity.status(HttpStatus.OK).body(updated) :
+                ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
     }
 }

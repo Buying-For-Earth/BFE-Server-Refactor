@@ -27,4 +27,14 @@ public class Product extends Datetime {
     @Column
     String thumbnail;
 
+    public void patch(Product product) {
+        if(product.name != null)
+            this.name = product.name;
+        if(product.price != null)
+            this.price = product.price;
+        if(product.detail != null)
+            this.detail = product.detail;
+        if(product.thumbnail != null)
+            this.thumbnail = product.thumbnail;
+    }
 }
