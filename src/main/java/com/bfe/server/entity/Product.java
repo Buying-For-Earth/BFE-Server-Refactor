@@ -36,5 +36,7 @@ public class Product extends Datetime {
             this.detail = product.detail;
         if(product.thumbnail != null)
             this.thumbnail = product.thumbnail;
+        if(product.category != null)
+            this.category = product.category;
     }
 }
