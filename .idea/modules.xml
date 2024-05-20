@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/BFE-server-refacotor.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/BFE-server-refacotor.server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.bfe.server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.bfe.server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/server.main.iml" />
     </modules>

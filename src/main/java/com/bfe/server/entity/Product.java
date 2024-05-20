@@ -1,5 +1,6 @@
 package com.bfe.server.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,20 +13,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product extends Datetime {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) Long id;
+
     @ManyToOne
     @JoinColumn(name = "category_id")
+    @JsonBackReference
     private Category category;
-    @Column
-    String name;
-    @Column
-    Integer price;
-    @Column
-    String detail;
-    @Column
-    String thumbnail;
+
+    @Column String name;
+    @Column Integer price;
+    @Column String detail;
+    @Column String thumbnail;
 
     public void patch(Product product) {
         if(product.name != null)
