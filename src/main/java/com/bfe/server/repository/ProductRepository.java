@@ -10,10 +10,4 @@ import java.util.List;
 
 @RepositoryRestResource
 public interface ProductRepository extends CrudRepository <Product, Long> {
-    @Query(value = "" +
-            "select *" +
-            "from product " +
-            "where category_id = :id",
-            nativeQuery = true)
-    List<Product> findByCategoryId(Long id);
 }
